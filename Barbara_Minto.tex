@@ -1,0 +1,14 @@
+\documentclass[pstricks,border=1pt]{standalone}
+\usepackage{multido}
+\SpecialCoor
+
+\def\Pyramid#1{%
+    \begin{pspicture}(#1,-#1)
+    \multido{\i=1+1}{#1}{%
+        \pstriangle(!#1 2 div \i\space neg)(\i,\i)
+        \uput[90](!#1 2 div \i\space neg){\char\numexpr\i+64}}
+    \end{pspicture}}
+
+\begin{document}
+\Pyramid{6}
+\end{document}
