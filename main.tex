@@ -1,6 +1,16 @@
 \documentclass[a4paper, 11pt, margin=1in]{article}
 \usepackage[inline]{enumitem}
 \usepackage{color}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\tikzset{
+  basic/.style  = {draw, text width=2cm, drop shadow, font=\sffamily, rectangle},
+  root/.style   = {basic, rounded corners=2pt, thin, align=center,
+                   fill=green!30},
+  level 2/.style = {basic, rounded corners=6pt, thin,align=center, fill=green!60,
+                   text width=8em},
+  level 3/.style = {basic, thin, align=left, fill=pink!60, text width=10.5em}
+}
 
 \renewcommand{\baselinestretch}{1.15}
 
@@ -28,16 +38,6 @@ Three main concerns that can be raised are - \\
  \item \textbf{Accounting liability:}IKEA's business model is tightly coupled with geopolitical dynamics. This is a huge accounting liability in terms of potential litigations.
 \end{enumerate*}
 \end{abstract}
-\section{Situation}
-Since 1993, when "Child Labor Deterrance Act" was proposed in US Congress, IKEA has been setting up \textbf{policies and practices} to closely \textbf{monitor its suppliers}. The efforts of IKEA has lead to its redefined relationship with its suppliers. According to reports, \textbf{benefits and concerns} associated with the aforementioned policies and practices, are fundamental to IKEA's business, in particular, and to international socioeconomic structure, in general.
-\section{Complications}
-Governance and administrative structures of South Asian countries are unlike those of the Western Civilization. Populous countries like the ones in South Asia have a complex socioeconomic model. 
-The enforcement of IWAY policies and practices has been effective but it can not guarantee compliance. Controlling these models with mandate without accounting for the complexity of the underlying business model is a wishful thinking because of the estimatably large cost of validating the business transactions in a complex socioeconomic model.
-
-\section{Questions}
-I question IKEA's decision to reject Rugmark Consortium's invitation to join the Consortium. Given the fact that it was the best option of that time. \cite{publichearing1998}
-Importance of independent consortiums organized by elite entrepreneurs who drive policy by aligning with the social needs can be presented to support the need of strategic alliances with elite policy entrepreneurs. I present this statement from a research done in 2018 - "..the success or failure of early nineteenth-century child labor laws depended on these actors’ social skill, pragmatic creativity, and goal-directedness." \cite{anderson2018policy} Here "actors" refers to "elite policy entrepreneurs".
-
 
 \include{timeline_content}
 
@@ -54,7 +54,47 @@ Figure 2:\%-Change in Sales\\
 
 %\includepdf{fig.pdf}
 %\includepdf{fig2.pdf}
+\subsection{Situation/Complications/Questions}
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=40mm},
+  edge from parent/.style={->,draw},
+  >=latex]
 
+% root of the the initial tree, level 1
+\node[root] {IWAY}
+% The first level, as children of the initial tree
+  child {node[level 2] (c1) {Situation}}
+  child {node[level 2] (c2) {Complication}}
+  child {node[level 2] (c3) {Question}};
+
+% The second level, relatively positioned nodes
+\begin{scope}[every node/.style={level 3}]
+\node [below of = c1, xshift=25pt] (c11) {redefined supplier relationship};
+\node [below of = c11] (c12) {affect on sales};
+\node [below of = c12] (c13) {no compliance guarantee};
+
+\node [below of = c2, xshift=25pt] (c21) {complex socioeconomic model};
+\node [below of = c21] (c22) {expensive compliance};
+
+\node [below of = c3, xshift=25pt] (c31) {reject Rugmark Consortium?};
+\node [below of = c31] (c32) {best option \cite{publichearing1998}};
+\node [below of = c32] (c33) {policy entrepreneurs\cite{anderson2018policy}};
+\end{scope}
+
+% lines from each level 1 node to every one of its "children"
+\foreach \value in {1,2,3}
+  \draw[->] (c1.195) |- (c1\value.west);
+
+\foreach \value in {1,...,2}
+  \draw[->] (c2.195) |- (c2\value.west);
+
+\foreach \value in {1,...,3}
+  \draw[->] (c3.195) |- (c3\value.west);
+\end{tikzpicture}
+
+ %\footnote{I present this statement from a research done in 2018 - "..the success or failure of early nineteenth-century child labor laws depended on these actors’ social skill, pragmatic creativity, and goal-directedness." \cite{anderson2018policy} Here "actors" refers to "elite policy entrepreneurs".} 
+
+  
 \subsection{References}
 \begin{thebibliography}{9}
     \bibitem{tittle2018control}
