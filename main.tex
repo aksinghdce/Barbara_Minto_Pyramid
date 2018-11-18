@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Timeline%%%%%%%%%%%%
 \input{timeline_header.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{pgf}
+\usepackage{pdfpages}
 
 \begin{document}
 % Top Matter
@@ -29,10 +29,10 @@ I question IKEA's decision to reject Rugmark Consortium's invitation to join the
 \subsection{Timeline}
 \include{timeline_content}
 \subsection{Visualizations}
-\begin{figure}
-\caption{Growth In Sales}
-\scalebox{1.0}{\input{fig.pgf}}
-\end{figure}
+
+\includepdf{fig.pdf}
+\includepdf{fig2.pdf}
+
 \subsection{References}
 \begin{thebibliography}{9}
     \bibitem{tittle2018control}
