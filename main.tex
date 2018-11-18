@@ -5,6 +5,7 @@
 \input{timeline_header.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{pdfpages}
+\usepackage{graphicx}
 
 \begin{document}
 % Top Matter
@@ -30,8 +31,18 @@ I question IKEA's decision to reject Rugmark Consortium's invitation to join the
 \include{timeline_content}
 \subsection{Visualizations}
 
-\includepdf{fig.pdf}
-\includepdf{fig2.pdf}
+\begin{figure}[h]
+   \centering
+   \begin{tabular}{c c}
+       \includegraphics[page=1,width=.6\textwidth]{fig.pdf} & 
+       \includegraphics[page=1,width=.6\textwidth]{fig2.pdf} \\
+   \end{tabular}
+ \caption{Sales and its \%-Change; respectively}
+ \label{fig:Test}
+\end{figure}
+
+%\includepdf{fig.pdf}
+%\includepdf{fig2.pdf}
 
 \subsection{References}
 \begin{thebibliography}{9}
