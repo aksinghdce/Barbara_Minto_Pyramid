@@ -1,4 +1,5 @@
-\documentclass[a4paper, 11pt, margin=1in]{article}
+\documentclass[a4paper, oneside, 11pt]{memoir}
+\usepackage[margin=1in]{geometry}
 \usepackage[inline]{enumitem}
 \usepackage{color}
 \usepackage{tikz}
@@ -19,12 +20,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{pdfpages}
 \usepackage{graphicx}
-
+\title{Decouple Yet Control}
+\author{Amit Kumar Singh}
 \begin{document}
-
+\maketitle
+\pagebreak
 \renewcommand{\abstractname}{Executive Summary}
 \begin{abstract}
-\textbf{Short term action:}conduct recurring meetings with Venkat to reach \textbf{mutual agreement}. The agreement would list the top three concerns that resist compliance with IWAY. \textbf{Finer point:}The process of mutual agree must be based on mutual respect \cite{smeltzer1997meaning} and it must be founded on the ideas of exerting purchasing power to force Venkat into compliance. \cite{tittle2018control} \cite{inderst2011countervailing} \\\textbf{Long term strategy:} IWAY policies and practices should be revised to work with consortiums to nutralize threat to IKEA's value chain.\footnote{ from hostile organizations that deploy intended and organized attacks.} \cite{publichearing1998_183}\\
+\textbf{Short term action plan:}conduct recurring meetings with Venkat to reach \textbf{mutual agreement}. The agreement would list the top three concerns inhibiting compliance with IWAY. \textbf{Finer point:}The process of mutual agreement must be based on mutual respect \cite{smeltzer1997meaning} and it must be founded on the ideas of Authoritative, Affiliative and Democratic style of leadership \cite{goleman2000leadership} to nudge \cite{leonard2008richard} Venkat into compliance. \cite{tittle2018control} \cite{inderst2011countervailing} \\\textbf{Long term strategy:} IWAY policies and practices should be revised to work with consortiums to neutralize threat to IKEA's value chain.\footnote{ from hostile organizations that deploy intended and organized attacks.} \cite{publichearing1998_183}\\
 There are \textbf{three main benefits} of redefined relationship between IKEA and its suppliers - \\
 \begin{enumerate*}
  \item \textbf{Brand-Image Improved}\footnote{Competitive advantage by forward integration: by appealing to customer's sentiments} ,
@@ -33,23 +36,21 @@ There are \textbf{three main benefits} of redefined relationship between IKEA an
 \end{enumerate*} \\
 Three main concerns that can be raised are - \\
 \begin{enumerate*}
- \item \textbf{New cost} to meet the requirements of strict compliance.\footnote{ requires exhaustive monitoring, which is expensive in many dimensions. Because, compliance is difficult to validate in the real world. I present a supporting quote from a recent research - "central premise is that the total amount of control people are subjected to, relative to the control they can exercise, will affect the probability and type of their deviant behavior." \cite{tittle2018control}}
- \item \textbf{Threat to sales:}stronger control on suppliers would affect IKEA's business. \footnote{tighter coupling of business models is not recommended. This is against the fundamental  principles of system architecture.}
+ \item \textbf{New cost} to meet the requirements of strict compliance.\footnote{ requires exhaustive monitoring, which is expensive in many dimensions. Because, compliance is difficult to validate in the real world. I present a supporting quote from a recent research - "central premise is that the total amount of control people are subjected to, relative to the control they can exercise, will affect the probability and type of their deviant behavior." }\footnote{tighter coupling of business models is not recommended. This is against the fundamental  principles of system architecture.}\cite{tittle2018control}
+ \item \textbf{Threat to sales:} misalignment of IKEA's goals with those of the media that influences customers would affect IKEA's business. 
  \item \textbf{Accounting liability:}IKEA's business model is tightly coupled with geopolitical dynamics. This is a huge accounting liability in terms of potential litigations.
 \end{enumerate*}
 \end{abstract}
 
 \section{Reasoning}
 \begin{enumerate*}
-\item For ensuring better compliance of IWAY, intensity of supplier-monitoring must scale proportional to IKEA's scale of sales. Scale and complexity of IKEA's supplier base as a whole is directly proportional to IKEA's sales. One practical solution to mitigate the proportional rise of cost is to collaborate with local organizations that understand local socioeconomic structure. This reasoning feeds into short time actions that IKEA must undertake.
-\item In order to mitigate threat to sales, IKEA works with other organizations like - "Swedish Work Group for Abolishment of Child Labour in the Carpet Industry", "Swedish Save the children", and "International Labour Organisation"\cite{publichearing1998_479}. IKEA must actively collaborate with the activism groups in Sweden and those that operate at international organizations. This will ensure competitive advantage by forward integration. This reasoning feeds into long term strategy along with the next and final point.
+\item To ensure \textbf{better yet cost effective IWAY compliance}, intensity of supplier-monitoring must not scale proportional to IKEA's sales. \textbf{Scale and complexity of IKEA's supplier base as a whole is directly proportional to IKEA's sales}. IKEA should \textbf{aim to decouple from complexity of its suppliers to keep cost of monitoring independent}. One practical solution to mitigate the proportional rise of cost is to \textbf{collaborate with local organizations that understand local socioeconomic structure}. This reasoning feeds into short time actions that IKEA must undertake.
+\item In order to mitigate threat to sales, IKEA works with other organizations like - "Swedish Work Group for Abolishment of Child Labour in the Carpet Industry", "Swedish Save the children", and "International Labour Organisation"\cite{publichearing1998_479}. IKEA must actively collaborate with the activism groups in Sweden and those that operate at international organizations. This will ensure competitive advantage by forward integration \cite{harrigan1985vertical}. This reasoning feeds into long term strategy along with the next and final point.
 \item IKEA must look at IWAY as a control system that evolves with appropriate deployment of a feedback from geopolitical events.
 \end{enumerate*}
 
 
 \include{timeline_content}
-
-\subsection{Visualizations}
 
 Figure 2:\%-Change in Sales\\
 
@@ -62,7 +63,8 @@ Figure 2:\%-Change in Sales\\
 
 %\includepdf{fig.pdf}
 %\includepdf{fig2.pdf}
-\subsection{Situation/Complications/Questions}
+\section{Situation/Complications/Questions}
+Here's a short summary of the case:\\
 \begin{tikzpicture}[
   level 1/.style={sibling distance=40mm},
   edge from parent/.style={->,draw},
@@ -101,10 +103,12 @@ Figure 2:\%-Change in Sales\\
 \end{tikzpicture}
 
  %\footnote{I present this statement from a research done in 2018 - "..the success or failure of early nineteenth-century child labor laws depended on these actors’ social skill, pragmatic creativity, and goal-directedness." \cite{anderson2018policy} Here "actors" refers to "elite policy entrepreneurs".} 
-
   
-\subsection{References}
 \begin{thebibliography}{9}
+    \bibitem{goleman2000leadership}
+    Goleman, D. (2000). Leadership that gets results. Harvard business review, 78(2), 4-17.
+    \bibitem{leonard2008richard}
+    Leonard, T. C. (2008). Richard H. Thaler, Cass R. Sunstein, Nudge: Improving decisions about health, wealth, and happiness.
     \bibitem{tittle2018control}
     Tittle, C. R. (2018). Control balance: Toward a general theory of deviance. Routledge.
     \bibitem{anderson2018policy}
@@ -117,5 +121,7 @@ Figure 2:\%-Change in Sales\\
     Smeltzer, L. R. (1997). The meaning and origin of trust in buyer‐supplier relationships. International journal of purchasing and materials management, 33(4), 40-48.
     \bibitem{inderst2011countervailing}
     Inderst, R., \& Wey, C. (2011). Countervailing power and dynamic efficiency. Journal of the European Economic Association, 9(4), 702-720.
+    \bibitem{harrigan1985vertical}
+    Harrigan, K. R. (1985). Vertical integration and corporate strategy. Academy of Management journal, 28(2), 397-425.
 \end{thebibliography}
 \end{document}
